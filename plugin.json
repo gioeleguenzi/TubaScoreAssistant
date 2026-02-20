@@ -1,0 +1,10 @@
+{
+    "id": "tuba.score.assistant",
+    "name": "Tuba Score Assistant",
+    "version": "1.0",
+    "description": "Help composers and arrangers to write a readable tuba (and euphonium) part ",
+    "thumbnail": "",
+    "main": "main.qml",
+    "api": "3.0",
+    "requiresScore": true
+}
