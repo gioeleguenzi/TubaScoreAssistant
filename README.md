@@ -1,5 +1,7 @@
 # Tuba Score Assistant
 
+*by Gioele Guenzi (@gioeleguenzi)*
+
 A MuseScore plugin that helps composers and arrangers keep **tuba** (and **euphonium**) parts readable by detecting out-of-range notes and automatically adding an octave-shifted equivalent.
 
 ## Features
@@ -71,6 +73,12 @@ If a note is:
 - `main.qml` — UI and main workflow
 - `logic.js` — note analysis/transformation logic
 
+## Author
+
+- Gioele Guenzi `@gioeleguenzi`
+
 ## License
 
-Add your project license here (for example MIT, GPL, etc.).
+This project is licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+
+See [LICENSE](LICENSE) for the full license text.
