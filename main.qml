@@ -5,14 +5,16 @@ import MuseScore 3.0
 import "logic.js" as Logic
 
 MuseScore {
-	id: pluginRoot
+	id: tubaScoreAssistant
 	menuPath: "Plugins.Tuba Score Assistant"
 	title: "Tuba Score Assistant"
-	description: "Help composers and arrangers write a readable tuba part"
+	description: "Help composers and arrangers to write a readable tuba (and euphonium) part"
 	version: "1.0"
 	pluginType: "dialog"
-	width: 372
+	thumbnailName: "thumbnail.png"
+	width: 300
 	height: 170
+	requiresScore: true
 
 	property var options: ({
 		lowPitchThreshold: 38,
@@ -21,39 +23,6 @@ MuseScore {
 
 	property var noteNames: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 	property var octaveValues: ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
-
-	function applyManifestMetadata(manifest) {
-		if (!manifest) {
-			return;
-		}
-
-		if (manifest.name) {
-			pluginRoot.title = manifest.name;
-			pluginRoot.menuPath = "Plugins." + manifest.name;
-		}
-		if (manifest.description) {
-			pluginRoot.description = manifest.description;
-		}
-		if (manifest.version) {
-			pluginRoot.version = manifest.version;
-		}
-	}
-
-	function loadManifestFromFile() {
-		var request = new XMLHttpRequest();
-		request.open("GET", "plugin.json", false);
-		request.send();
-
-		if (request.status !== 200 && request.status !== 0) {
-			return;
-		}
-
-		try {
-			var manifest = JSON.parse(request.responseText);
-			applyManifestMetadata(manifest);
-		} catch (e) {
-		}
-	}
 
 	function midiFromSelection(noteIndex, octaveText) {
 		var octave = parseInt(octaveText);
@@ -97,7 +66,7 @@ MuseScore {
 	}
 
 	onRun: {
-		loadManifestFromFile();
+		
 	}
 
 	ColumnLayout {

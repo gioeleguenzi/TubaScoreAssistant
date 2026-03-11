@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Help composers and arrangers to write a readable tuba (and euphonium) part ",
     "author": "@gioeleguenzi",
-    "thumbnail": "",
+    "thumbnail": "thumbnail.png",
     "main": "main.qml",
     "api": "3.0",
     "requiresScore": true

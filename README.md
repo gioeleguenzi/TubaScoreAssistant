@@ -18,20 +18,6 @@ A MuseScore plugin that helps composers and arrangers keep **tuba** (and **eupho
   - full score (when nothing is selected)
 - For each out-of-range note, adds a new note at ±12 semitones (1 octave), avoiding duplicates in the same chord.
 
-## How it works
-
-The plugin checks each note against two MIDI thresholds:
-
-- `lowPitchThreshold` (minimum note)
-- `highPitchThreshold` (maximum note)
-
-If a note is:
-
-- **too low**: a note one octave higher is added
-- **too high**: a note one octave lower is added
-
-> Note: the plugin **adds** the corrected note to the chord; it does not automatically remove the original note.
-
 ## Installation
 
 1. Open your MuseScore plugins folder (platform-dependent).
@@ -49,6 +35,20 @@ If a note is:
 3. Launch the plugin from **Plugins > Tuba Score Assistant**.
 4. Set highest/lowest note thresholds or use a preset.
 5. Click **Run**.
+
+## How it works
+
+The plugin checks each note against two MIDI thresholds:
+
+- `lowPitchThreshold` (minimum note)
+- `highPitchThreshold` (maximum note)
+
+If a note is:
+
+- **too low**: a note one octave higher is added
+- **too high**: a note one octave lower is added
+
+> Note: the plugin **adds** the corrected note to the chord; it does not automatically remove the original note.
 
 ## Default values
 
