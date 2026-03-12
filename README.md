@@ -18,15 +18,17 @@ A MuseScore plugin that helps composers and arrangers keep **tuba** (and **eupho
   - full score (when nothing is selected)
 - For each out-of-range note, adds a new note at ±12 semitones (1 octave), avoiding duplicates in the same chord.
 
+### Example of usage
+- Before:
+![Before](./README-Content/before.png)
+- After:
+![After](./README-Content/after.png)
+
 ## Installation
 
 1. Open your MuseScore plugins folder (platform-dependent).
-2. Create (or copy) a `TubaScoreAssistant` folder.
-3. Place these files inside:
-   - `plugin.json`
-   - `main.qml`
-   - `logic.js`
-4. In MuseScore, open **Plugins > Plugin Manager** and enable **Tuba Score Assistant**.
+2. Unpack `TubaScoreAssistant.zip` in it.
+3. In MuseScore, open **Plugins > Plugin Manager** and enable **Tuba Score Assistant**.
 
 ## Usage
 
